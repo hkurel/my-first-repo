@@ -1,3 +1,10 @@
-My first GIT file
-second git line
-thisr part
+provider "aws" {
+    region = "us-east-1"
+}
+
+resource "aws_instance" "example" {
+    ami = "ami-04a81a99f5ec58529"
+    instance_type = "t2.micro"
+    subnet_id = "default"
+    key_name = "xxx"
+}
